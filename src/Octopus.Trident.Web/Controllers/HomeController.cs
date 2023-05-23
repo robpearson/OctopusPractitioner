@@ -50,14 +50,14 @@ namespace Octopus.Trident.Web.Controllers
         public IActionResult AddInstance()
         {
             var instance = new InstanceModel();
-
+            // Add Instance
             return View("InstanceMaintenance", instance);
         }
 
         public async Task<IActionResult> EditInstance(int id)
         {
             var instance = await _instanceRepository.GetByIdAsync(id);
-
+            // Edit Instance
             return View("InstanceMaintenance", instance);
         }
 
